@@ -35,7 +35,7 @@
 
 | Windows 11界面 | Redhat 7.9界面 |
 |----------|----------|
-| ![Win11](res/win_res1.png)  ![Win11](res/win_res1.png) |  ![Redhat 7.9](res/linux_res2.png) ![Redhat 7.9](res/linux_res2.png) |
+| ![Win11](res/win_res1.png)  ![Win11](res/win_res2.png) | ![Redhat 7.9](res/linux_res2.png) ![Redhat 7.9](res/linux_res1.png) |
 
 > 💡 *不同平台运行结果以实际结果为准*
 
