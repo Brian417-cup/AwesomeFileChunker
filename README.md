@@ -60,7 +60,7 @@
 
 ### Windows / MacOS 平台
 
-1. 下载 [最新 Release]()，配置JRE8+环境
+1. 下载 [最新 Release下的JAR包](https://github.com/Brian417-cup/AwesomeFileChunker/releases/tag/v1.0.0)，配置JRE8+环境
 2. 终端执行：
 
   ```bash
