@@ -30,10 +30,10 @@ public class LogSplitUtil {
             if (!outputDir.isDirectory()) {
                 throw new IllegalArgumentException("输出路径存在但不是一个文件夹: " + outputDir.getAbsolutePath());
             }
-            File[] files = outputDir.listFiles();
-            if (files != null && files.length > 0) {
-                throw new IllegalArgumentException("输出目录非空，请指定空文件夹:\n" + outputDir.getAbsolutePath());
-            }
+//            File[] files = outputDir.listFiles();
+//            if (files != null && files.length > 0) {
+//                throw new IllegalArgumentException("输出目录非空，请指定空文件夹:\n" + outputDir.getAbsolutePath());
+//            }
         } else {
             if (!outputDir.mkdirs()) {
                 throw new IOException("无法创建输出目录: " + outputDir.getAbsolutePath());

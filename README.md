@@ -1,10 +1,13 @@
-# 文件分割合并工具 (File Split & Merge Tool)
+# 文件分割合并工具 (AwesomeFileChunker)
 
 [![Java](https://img.shields.io/badge/Java-8+-orange?logo=java)](https://www.oracle.com/java/)
 [![JavaFX](https://img.shields.io/badge/JavaFX-8+-blue?logo=javafx)](https://openjfx.io/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 一款跨平台的文件分割与合并工具，参考Linux中的`split`和`merge`命令实现相关基础功能。
+
+- **GUI 模式**：基于 JavaFX 的可视化界面（兼容 Linux/Windows/macOS）
+- **CLI 模式**：轻量级控制台终端程序（适合服务器、无图形环境、脚本自动化）
 
 分割时支持**按字节**（KB/MB/GB）和**按行数**（日志文件）分割，合并时可**自定义分片顺序**，适用于大文件处理、日志分析等场景。
 
@@ -19,9 +22,9 @@
 
 - **灵活合并**
     - 自动识别指定文件夹下的 `xxx_01.ext`, `xxx_02.ext` 格式分片
-    - **可视化调整**：通过 ↑/↓ 按钮或拖拽调整合并顺序
-    - **右键删除**：移除不需要的分片
-    - 合并前预览文件列表（完整路径、文件名、大小）
+    - **顺序控制**：
+        - GUI：通过 ↑/↓ 按钮、拖拽调整顺序，右键删除分片
+        - CLI：**自动生成清单文件 `!merge_order.txt`**，用户编辑后合并（每行一个文件名，无需路径）
 
 - **专业体验**
     - 进度条实时显示分割/合并进度
@@ -54,24 +57,24 @@
 
 ---
 
-## 🚀 快速开始
+## 🚀 快速开始（GUI模式）
 
 推荐通过 `JRE`环境 和 下载 `SplitAndCombineFile.jar` 运行
 
 ### Windows / MacOS 平台
 
-1. 下载 [最新 Release下的JAR包](https://github.com/Brian417-cup/AwesomeFileChunker/releases/tag/v1.0.0)，配置JRE8+环境
+1. 下载 [最新 Release下的JAR包](https://github.com/Brian417-cup/AwesomeFileChunker/releases/tag/v1.1.0) ，配置JRE8+环境
 2. 终端执行：
 
   ```bash
-  java -jar <SplitAndCombineFile.jar完整路径>
+  java -jar <AwesomeFileChunker.jar完整路径>
   ```
 
 > 💡 *如果有需要，在Windows平台可以通过 exe4j 等软件将jre和jar包打包成一个可执行文件来一键运行！！*
 
 ### Linux 平台
 
-1. 下载 [最新 Release下的JAR包](https://github.com/Brian417-cup/AwesomeFileChunker/releases/tag/v1.0.0) ，配置JRE8+环境
+1. 下载 [最新 Release下的JAR包](https://github.com/Brian417-cup/AwesomeFileChunker/releases/tag/v1.1.0) ，配置JRE8+环境
 2. 配置 X Server 环境（针对终端服务器，否则跳过这步）
 
   ```bash
@@ -81,5 +84,18 @@
 3. 终端执行：
 
   ```bash
-  java -Dprism.order=sw -jar <SplitAndCombineFile.jar完整路径>
+  java -Dprism.order=sw -jar <AwesomeFileChunker.jar完整路径>
   ```
+
+## 🚀 快速开始（CLI模式）
+
+1. 下载 [最新 Release下的JAR包](https://github.com/Brian417-cup/AwesomeFileChunker/releases/tag/v1.1.0) ，配置JRE8+环境
+2. 终端执行：
+
+```shell
+  java -jar <AwesomeFileChunker_Console.jar完整路径>
+```
+
+## 🚗 其他事项
+
+💡 如果对分割合并后的文件需要验证完整性，可以使用 [文件校验和工具](https://github.com/Brian417-cup/AwesomeFileChecksum) 比较源文件和合并后的文件校验和是否相等
