@@ -53,7 +53,7 @@
 | **内存** | ≥ 512 MB | 大文件处理建议 ≥ 2GB |
 
 > ⚠️ **重要**：  
-> 普通 从OpenJDK 11+ 开始**不内置 JavaFX**！推荐使用 **JDK 8**，或单独安装 JavaFX SDK。
+> 普通 从OpenJDK 9+ 开始**不内置 JavaFX**！推荐使用 **JDK 8**，或单独安装 JavaFX SDK。
 
 ---
 
@@ -84,6 +84,7 @@
 3. 终端执行：
 
   ```bash
+<<<<<<< HEAD
   java -Dprism.order=sw -jar <AwesomeFileChunker.jar完整路径>
   ```
 
@@ -99,3 +100,13 @@
 ## 🚗 其他事项
 
 💡 如果对分割合并后的文件需要验证完整性，可以使用 [文件校验和工具](https://github.com/Brian417-cup/AwesomeFileChecksum) 比较源文件和合并后的文件校验和是否相等
+=======
+  java -Dprism.order=sw -jar <SplitAndCombineFile.jar完整路径>
+  ```
+
+
+
+## 🚗 其他事项
+
+💡 如果对分割合并后的文件需要验证完整性，可以使用 [文件校验和工具](https://github.com/Brian417-cup/AwesomeFileChecksum) 比较源文件和合并后的文件校验和是否相等
+>>>>>>> 80b05e9111be123901479d926f16e0845fffeed7
